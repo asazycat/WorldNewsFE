@@ -1,6 +1,17 @@
 Instructions to Build:
 
-- Call endpoints with axios and allow input of available queries. Divide it into Server/Client Components
+Stuff done:
 
+-Set up axios grobal header with api key. 
 
-- Tailwind Style each app page
+-Successfully returned SearchNews api call
+
+-Set up url params on server component
+
+Plan to do:
+ 
+-Will make client page for SearchNews. Will fill params using state and call back request from server component on state change. 
+
+-Use Material UI to setup aestetic
+
+-Do rest of the api endpoints the same way
