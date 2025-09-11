@@ -1,12 +1,13 @@
 import axios from "axios";
-import SearchNewsClient from "./SearchNewsClient";
 
-export default async function SearchNews() {
-    const text = '';
+
+export default async function SearchNewsServer() {
+  
+    const text = ''
     const language = 'en'
     const date = new Date()
     const params = new URLSearchParams({
-        'text': '',
+        'text': text,
         'text-match-indexes': '',
         'title': '',
         'source-country': '',
@@ -35,9 +36,9 @@ export default async function SearchNews() {
         .catch((err) => console.log(err))
     
     
-  
+  console.log(searchNewsRes)
 
     return (
-        <SearchNewsClient news={searchNewsRes} text={text} />
+        <></>
     )
 }
