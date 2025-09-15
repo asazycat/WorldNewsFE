@@ -31,25 +31,29 @@ export default function SearchNewsClientForm(
             setLanguage:React.Dispatch<SetStateAction<string>>,
             setsearchNews: React.Dispatch<SetStateAction<NewsArticle[]>>
     }) {
-    return (<div>
+    return (<div className="flex flex-row w-9/10 m-auto border justify-around p-4 mt-5">
                 <div>
-                      <TextField id="standard-basic" label="Standard" variant="standard" onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}/>
+                      <TextField id="standard-basic" label="Search" variant="standard" onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}/>
                 </div>
-                <div>
+                 <div>
+                       <p>Search By</p>
                        <label> <Checkbox/> Title</label>
                        <label> <Checkbox /> Content</label>
                 </div>
-                    <div>
+                <div>
+                    <p>Country</p>
                     <Select label="country" value={country}>
                         {countries.map((eachCountryObj, i) => <MenuItem value={eachCountryObj["country-code"]} key={i} onClick={() => setCountry(eachCountryObj["country-code"])}>{eachCountryObj.country}</MenuItem>)}
                     </Select> 
                 </div>
-                  <div>
+                <div>
+                    <p>Language</p>
                     <Select label="language" value={language}>
                         {languages.map((eachLanguageObj, i) => <MenuItem value={eachLanguageObj["language-code"]} key={i} onClick={() => setLanguage(eachLanguageObj["language-code"])}>{eachLanguageObj.language}</MenuItem>)}
                     </Select> 
                 </div>
                 <div>
+                    <p>Category</p>
                     <Select label="categories" value={category}>
                         <MenuItem value={''}>{category}</MenuItem>
                         {categories.map((eachCategory,i) => <MenuItem value={eachCategory} key={i} onClick={() => setCategory(eachCategory)}>{eachCategory}</MenuItem>)}

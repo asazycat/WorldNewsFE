@@ -36,6 +36,6 @@ export default async function SearchNewsServer() {
     
     
     return (
-        <ul>{searchNewsRes.map((eachNews: NewsArticle) =>  <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</ul>
+        <ul className="w-9/10 m-auto border justify-around p-4 mt-5 grid grid-cols-5">{searchNewsRes.map((eachNews: NewsArticle) =>  <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</ul>
     )
 }

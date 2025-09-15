@@ -17,10 +17,11 @@ export default function SearchNewsClient({children}: {children: React.ReactNode}
         return (
             <>
                 
+                
                 <div>
                     <SearchNewsClientForm text={text} textMatchIndexes={textMatchIndexes} country={country} language={language} category={category} setText={setText} setTextMatchIndexes={setTextMatchIndexes} setCountry={setCountry} setCategory={setCategory} setLanguage={setLanguage} setsearchNews={setsearchNews}/>
                 </div>
-                <ul>{searchNews.map((eachNews: NewsArticle) => <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</ul>
+                <ul className="w-9/10 m-auto border justify-around p-4 mt-5 grid grid-cols-5">{searchNews.map((eachNews: NewsArticle) => <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</ul>
             </>
         )
     } else {
