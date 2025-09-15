@@ -1,17 +1,29 @@
-Instructions to Build:
+( ⚠️ **Work in Progress** – This project is still in the early stages. Features and UI may change dramatically.)
 
-Stuff done:
+## 📰 World News - (Early Stages)
 
--Set up axios grobal header with api key. 
+World News is a sources of news articles from many different news outlets (BBC, New York Times, MSN..etc) accross the globe. It is an archieve built with endpoints from WorldNewsAPI(https://worldnewsapi.com/docs/). NextJS is used to build the frontend artitecture along with Materials UI and some tailwind CSS for styling. API calls from WorldNewsAPI are limited and won't go beyond 50 tokens. In order to tackle this problem, api responses were otherwise cached to reduce fetch requests directly from WorldsNewsAPU or pushed to an ORM to reduce request count.  
 
--Successfully returned SearchNews api call
+## MAIN Features
 
--Set up url params on server component
+**-- Login page/Sign Up set up with WordPress CMS JWT Plugin**
 
-Plan to do:
- 
--Will make client page for SearchNews. Will fill params using state and call back request from server component on state change. 
+**-- Search for news articles from a variety of sources, different countries and in different languages**
 
--Use Material UI to setup aestetic
+**-- Extract news content from any news link or have it summarised for videos**
 
--Do rest of the api endpoints the same way
+**-- List of articles relevant to game selected, this is stored in the Wordpress backend in Posts**
+
+## 🚀 Tech Stack
+
+- **NextJS**
+- **TypeScript**
+- **Material UI**
+-**Tailwind CSS**
+- **Prisma ORM**
+
+
+## 🔗 Live Demo
+
+## 📦 Local SetUp and Installation
+
