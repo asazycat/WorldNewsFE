@@ -31,7 +31,7 @@ export default function SearchNewsClientForm(
             setLanguage:React.Dispatch<SetStateAction<string>>,
             setsearchNews: React.Dispatch<SetStateAction<NewsArticle[]>>
     }) {
-    return (<>
+    return (<div>
                 <div>
                       <TextField id="standard-basic" label="Standard" variant="standard" onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}/>
                 </div>
@@ -58,6 +58,6 @@ export default function SearchNewsClientForm(
                <Button variant="contained"  onClick={async () => {
                     await SearchNewsAction(text,textMatchIndexes,country,language,category).then((res) => { console.log(res);  setsearchNews(res)})
                 }}  >Search News</Button>
-    </>
+            </div>
     )
 }

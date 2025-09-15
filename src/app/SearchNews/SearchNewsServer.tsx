@@ -1,7 +1,7 @@
 
 import { axiosInstanceWithAPIKey } from "../axiosInstances"
 import { NewsArticle } from "../../../interfaces"
-
+import EachSearchNewsClient from "./EachSearchNewsClient"
 export default async function SearchNewsServer() {
     const date = new Date()
     const params = new URLSearchParams({
@@ -26,7 +26,7 @@ export default async function SearchNewsServer() {
     const url = `/search-news?${params}`
    
    
-  console.log(url)
+
 
 
     const searchNewsRes = await axiosInstanceWithAPIKey
@@ -36,6 +36,6 @@ export default async function SearchNewsServer() {
     
     
     return (
-        <ul>{searchNewsRes.map((eachNews: NewsArticle) => <li key={eachNews.id}>{eachNews.title}</li>)}</ul>
+        <ul>{searchNewsRes.map((eachNews: NewsArticle) =>  <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</ul>
     )
 }
