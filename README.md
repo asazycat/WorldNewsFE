@@ -31,5 +31,11 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 ## 🔗 Live Demo
 
+- To be added
+
 ## 📦 Local SetUp and Installation
+
+- Git clone, npm i then npm run dev
+
+If you get a server error, please change the api key in public/apiKey.ts to the one you can retrieve from https://worldnewsapi.com/docs/ . This is still in early development, plan to fix this later.
 
