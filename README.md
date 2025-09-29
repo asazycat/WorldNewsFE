@@ -1,5 +1,6 @@
 ( ⚠️ **Work in Progress** – This project is still in the early stages. Features and UI may change dramatically.)
 
+Stackblitzs Link - https://stackblitz.com/~/github.com/asazycat/WorldNewsFE
 ## 📰 World News - (Early Stages)
 
 World News is a sources of news articles from many different news outlets (BBC, New York Times, MSN..etc) accross the globe. It is an archieve built with endpoints from WorldNewsAPI(https://worldnewsapi.com/docs/). NextJS is used to build the frontend artitecture along with Materials UI and some tailwind CSS for styling. API calls from WorldNewsAPI are limited and won't go beyond 50 tokens. In order to tackle this problem, api responses were otherwise cached in memory or pushed to an ORM to be called from there for reducing requests directly from WorldNewsAPI.  
@@ -8,7 +9,7 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 **-- Login page/Sign Up setup**
 
-**-- Search for news articles from a variety of sources, different countries and in different languages**
+**-- Search for news articles from a variety of sources, different countries and in different languages** 
 
 **-- Extract news content from a given link and have it displayed regardless of format**
 
