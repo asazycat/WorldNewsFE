@@ -28,6 +28,8 @@ World News is a sources of news articles from many different news outlets (BBC, 
 - **Material UI**
 -**Tailwind CSS**
 - **Prisma ORM**
+- **AuthJS**
+
 
 
 ## 🔗 Live Demo
