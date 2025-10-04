@@ -13,3 +13,4 @@ export interface NewsArticle {
   source_country: string; 
   sentiment: number;
 }
+

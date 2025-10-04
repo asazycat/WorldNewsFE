@@ -57,3 +57,10 @@ export async function SearchNewsAction(
         .catch((err) => console.log(err))
     
 }
+
+
+
+export async function LoginCredentials(email:string, password:string) {
+    console.log(email, password)
+    return email
+}
