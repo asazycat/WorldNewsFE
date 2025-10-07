@@ -18,10 +18,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       placeholder: "password",
     },
       }, authorize: async (credentials) => {
-        const user = await prisma.user.findUnique({ where: { email: `${credentials.email}` }, select: { email: true, name: true, newsArticle: true } })
-        console.log(user)
-        return user;
+        const user = await prisma.user.findUnique({ where: { email: `${credentials.email}` }, select: { email: true, name: true, newsArticle: true, password:true } }).then((res) => res)
+        if (credentials.password === user!.password) {
+          return user
+        };
+        return null
   }
 })
   ],
+   session: {strategy: "jwt"}
 })

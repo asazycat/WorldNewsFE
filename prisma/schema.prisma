@@ -24,3 +24,7 @@ model User {
 }
 
 
+model Session {
+  
+}
+

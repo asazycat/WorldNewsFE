@@ -1,0 +1,18 @@
+import { retrieveNewsArray, retrieveNewsIds } from "../actions";
+import { auth } from "../api/auth/[...nextauth]/auth";
+
+export  async function RetrieveNewsServer() {
+    const session = await auth()
+    let str = ''
+    const arrofIds = await retrieveNewsIds(session?.user?.email || '').then((res) => res)
+
+    arrofIds?.newsArticle.forEach((element, index, array) => {
+        return index === array.length - 1 ? str += `${element}` : str += `${element},`
+    });
+    console.log(str)
+    const retrieveNews = await retrieveNewsArray(str).then((res) => res)
+    console.log(retrieveNews)
+    return (
+        <></>
+    )
+}

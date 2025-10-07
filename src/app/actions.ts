@@ -1,9 +1,10 @@
 
 'use server'
 
-
+import  prisma from "../../prisma"
+import { signIn, signOut } from "../app/api/auth/[...nextauth]/auth";
 import { axiosInstanceWithAPIKey } from "./axiosInstances";
-
+import { redirect } from "next/navigation"
 
 export async function SearchNewsAction(
     text: string,
@@ -60,7 +61,38 @@ export async function SearchNewsAction(
 
 
 
-export async function LoginCredentials(email:string, password:string) {
-    console.log(email, password)
-    return email
+export async function credentialsAction(formData: FormData) {
+    'use server'
+     console.log(formData)
+    try {
+        await signIn("credentials", formData)
+    }
+    catch (err) {
+        throw err
+    } finally {
+        redirect('/')
+    }
+}
+
+export async function endCredentialsAction() {
+      try {
+        await signOut()
+    }
+    catch (err) {
+        throw err
+    } 
+}
+     
+
+export async function retrieveNewsIds(email: string) {
+    return await prisma.user.findUnique({ where: { email: `${email}` }, select: { newsArticle: true } }).then((res) => res).catch((err) => { throw err })
+}
+
+export async function retrieveNewsArray(ids: string) {
+    console.log(ids)
+    const url = `/retrieve-news?ids=${ids}`
+   return await axiosInstanceWithAPIKey
+        .get(url)
+        .then((res) => res.data.news)
+        .catch((err) => console.log(err))
 }
