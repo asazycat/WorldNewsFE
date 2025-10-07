@@ -90,7 +90,10 @@ export async function retrieveNewsIds(email: string) {
 
 export async function retrieveNewsArray(ids: string) {
     console.log(ids)
-    const url = `/retrieve-news?ids=${ids}`
+    const params = new URLSearchParams({
+        'ids': ids
+    })
+    const url = `/retrieve-news?${params}`
    return await axiosInstanceWithAPIKey
         .get(url)
         .then((res) => res.data.news)
