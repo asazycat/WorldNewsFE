@@ -1,3 +1,4 @@
+import { NewsArticle } from "../../../interfaces";
 import { retrieveNewsArray, retrieveNewsIds } from "../actions";
 import { auth } from "../api/auth/[...nextauth]/auth";
 
@@ -13,6 +14,10 @@ export  async function RetrieveNewsServer() {
     const retrieveNews = await retrieveNewsArray(str).then((res) => res)
     console.log(retrieveNews)
     return (
-        <></>
+        <>
+        {
+            retrieveNews.map((eachNews: NewsArticle) => <li key={eachNews.id}>{eachNews.title}</li>)
+        }
+        </>
     )
 }

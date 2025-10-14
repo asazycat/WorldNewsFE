@@ -4,8 +4,12 @@ export default async function Home() {
   const session = await auth();
 
   if (session) {
-    return (
+    return (<>
       <h1>Welcome {session.user?.name}</h1>
+      <a href='/SearchNews'>Search News</a>
+      <a href='/RetrieveNews'>Retrieve News</a>
+      </>
+
     );
   } else {
     redirect('/Login')
