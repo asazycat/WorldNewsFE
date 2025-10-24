@@ -26,7 +26,6 @@ World News is a sources of news articles from many different news outlets (BBC, 
 - **NextJS**
 - **TypeScript**
 - **Material UI**
-- **Tailwind CSS**
 - **Prisma ORM**
 - **AuthJS**
 
@@ -38,7 +37,27 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 ## 📦 Local SetUp and Installation
 
-- Git clone, npm i then npm run dev
+**Git clone the repo** 
 
-If you get a server error, please change the api key in public/apiKey.ts to the one you can retrieve from https://worldnewsapi.com/docs/ . This is still in early development, plan to fix this later.
+**npm i to install dependencies**
+
+**npx auth secrect to generate a locla key for auth for authjs**
+
+**create a .env file in the root folder and copy the contents below**
+
+**npm run dev**
+
+```bash
+//.env
+DATABASE_URL="prisma+postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3RfaWQiOjEsInNlY3VyZV9rZXkiOiJza19VbEVGUHJrZUdIMGdxTURBQzFSZVAiLCJhcGlfa2V5IjoiMDFLNjlQUUtWOFA1VEFQU05ENFk5RkdSQTUiLCJ0ZW5hbnRfaWQiOiJhMDE3ZmYyZmU3NmExNDYzY2RlOWU0NzUwMmRiZTQ5OTM5Nzg5N2IwMzIwZWZkZmEwZTBjNWM5YTE1ZjNjYmQ4IiwiaW50ZXJuYWxfc2VjcmV0IjoiZmQ0YzZhNGYtZGE2YS00ZDQxLWFhMTMtZWQxNWMzNjI5MmJjIn0.7JRJZLkcUdfQ-jhvenE3qxlbrhQwPsNhxfS65ZbgOq0"
+
+AUTH_SECRET="whatever auth secret key was generated for you"
+
+AUTH_URL="http://localhost:3000"
+
+ 
+
+```
+
+(If you get a server error when running the app on the browser, please change the api key in public/apiKey.ts to the one you can retrieve from https://worldnewsapi.com/docs/ . This is still in early development, plan to fix this later.)
 
