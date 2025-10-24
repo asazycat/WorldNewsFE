@@ -33,7 +33,7 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 ## 🔗 Live Demo
 
-- To be added
+[https://world-news-puce.vercel.app/] (world-news-puce.vercel.app)
 
 ## 📦 Local SetUp and Installation
 
