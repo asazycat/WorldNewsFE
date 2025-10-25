@@ -43,6 +43,10 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 **npx auth secrect to generate a locla key for auth for authjs**
 
+**npx prisma schema**
+
+**npx prisma db seed**
+
 **create a .env file in the root folder and copy the contents below**
 
 **npm run dev**

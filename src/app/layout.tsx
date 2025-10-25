@@ -1,17 +1,24 @@
+import { auth } from "./api/auth/[...nextauth]/auth";
 
-import { SessionProvider } from "next-auth/react";
-export default function RootLayout({
+import LoginServer from "../app/Login/LoginServer";
+import LogoutServer from "../app/Login/LogoutServer";
+import Navigation from "./Navigation";
+
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await auth()
   return (
     <html lang="en">
-      <body>
-        <SessionProvider>
-          {children}
-        </SessionProvider>
-      </body>
+      {session ? (<body>
+        <Navigation user={session?.user?.name ?? ''}/>
+       {children}
+      </body>) : (<body>
+        <LoginServer/>
+      </body>)}
     </html>
   );
 }
