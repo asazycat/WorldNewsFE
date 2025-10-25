@@ -33,7 +33,7 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 ## 🔗 Live Demo
 
-[https://world-news-puce.vercel.app/] (world-news-puce.vercel.app)
+[https://world-news-fe.vercel.app/] (world-news-fe.vercel.app)
 
 ## 📦 Local SetUp and Installation
 
@@ -43,7 +43,7 @@ World News is a sources of news articles from many different news outlets (BBC, 
 
 **npx auth secrect to generate a locla key for auth for authjs**
 
-**npx prisma schema**
+**npx prisma generate schema**
 
 **npx prisma db seed**
 
