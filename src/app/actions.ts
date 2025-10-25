@@ -77,7 +77,6 @@ export async function credentialsAction(formData: FormData) {
 export async function endCredentialsAction() {
       try {
         await signOut()
-        redirect('/')
     }
     catch (err) {
         throw err
