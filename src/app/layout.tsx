@@ -1,7 +1,6 @@
 import { auth } from "./api/auth/[...nextauth]/auth";
 
 import LoginServer from "../app/Login/LoginServer";
-import LogoutServer from "../app/Login/LogoutServer";
 import Navigation from "./Navigation";
 
 
