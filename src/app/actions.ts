@@ -54,7 +54,7 @@ export async function SearchNewsAction(
 
     return await axiosInstanceWithAPIKey
         .get(url)
-        .then((res) => res.data.news)
+        .then((res) => {return res.data.news})
         .catch((err) => console.log(err))
     
 }
@@ -85,7 +85,7 @@ export async function endCredentialsAction() {
      
 
 export async function retrieveNewsIds(email: string) {
-    return await prisma.user.findUnique({ where: { email: `${email}` }, select: { newsArticle: true } }).then((res) => res).catch((err) => { throw err })
+    return await prisma.user.findUnique({ where: { email: `${email}` }, select: { newsArticle: true } }).then((res) => res)
 }
 
 export async function retrieveNewsArray(ids: string) {

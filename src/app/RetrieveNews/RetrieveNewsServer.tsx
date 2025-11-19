@@ -7,7 +7,7 @@ export  async function RetrieveNewsServer() {
     let str = ''
     const arrofIds = await retrieveNewsIds(session?.user?.email || '').then((res) => res)
 
-    arrofIds?.newsArticle.forEach((element, index, array) => {
+    arrofIds?.newsArticle.forEach((element: any, index: number, array: string | any[]) => {
         return index === array.length - 1 ? str += `${element}` : str += `${element},`
     });
     console.log(str)

@@ -1,5 +1,5 @@
 import { auth } from "./api/auth/[...nextauth]/auth";
-
+import '../../styles/globals.css'
 import LoginServer from "../app/Login/LoginServer";
 import Navigation from "./Navigation";
 
