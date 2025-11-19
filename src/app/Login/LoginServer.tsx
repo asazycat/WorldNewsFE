@@ -1,9 +1,6 @@
 import { credentialsAction } from "../actions";
 export default async function LoginServer() {
-  function initials () {
-    // document.getElementById('credentials-email')?.value = 'ali@gmail.com';
-    // document.getElementById('credentials-password')?.value = 'ali'
-  }
+ 
        return (
             <form action={credentialsAction}>
            <label htmlFor="credentials-email">
