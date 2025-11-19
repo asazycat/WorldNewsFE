@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
+import { endCredentialsAction } from "./actions";
 
 const pages = ['Search News', 'Retrieve News', 'Top News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -162,7 +163,7 @@ export default function Navigation({user}:{user:string}) {
             >
               {settings.map((setting) => (
                 <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
+                  <Typography sx={{ textAlign: 'center' }} onClick={async () => await endCredentialsAction()}>{setting}</Typography>
                 </MenuItem>
               ))}
             </Menu>
