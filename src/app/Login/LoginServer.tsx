@@ -1,16 +1,16 @@
+
+
+import { Button, TextField } from "@mui/material";
 import { credentialsAction } from "../actions";
+
+
 export default async function LoginServer() {
  
        return (
-            <form action={credentialsAction}>
-           <label htmlFor="credentials-email">
-             Email
-             <input type="email" id="credentials-email" name="email" autoComplete="username" defaultValue="ali@gmail.com" required/>
-           </label>
-           <label htmlFor="credentials-password">
-             Password
-             <input type="password" id="credentials-password" name="password" autoComplete="current-password" defaultValue="ali" required/>
-           </label>
-           <input type="submit" value="Sign In" />
-         </form>);
+          <form action={credentialsAction}>
+            <TextField required name="email" label="Email" type="email" placeholder="email" aria-required defaultValue={'ali@gmail.com'}/>
+            <TextField name="password" label="Password" type="password" placeholder="password" autoComplete="current-password" defaultValue={'ali'} required/>
+            <Button type="submit" variant="contained" color="primary">Login</Button>
+          </form>
+         );
  }
