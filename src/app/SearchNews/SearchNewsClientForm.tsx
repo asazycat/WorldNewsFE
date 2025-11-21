@@ -60,7 +60,7 @@ export default function SearchNewsClientForm(
                     </Select>
                 </div>
                <Button variant="contained"  onClick={async () => {
-                    await SearchNewsAction(text,textMatchIndexes,country,language,category).then((res) => { console.log(res);  setsearchNews(res)})
+                    await SearchNewsAction(text,textMatchIndexes,country,language,category).then((res) => { console.log(res);  setsearchNews(res ?? [])})
                 }}  >Search News</Button>
             </div>
     )

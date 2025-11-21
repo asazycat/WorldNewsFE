@@ -12,7 +12,7 @@ export default function SearchNewsClient({children}: {children: React.ReactNode}
     const [country, setCountry] = useState('us')
     const [language, setLanguage] = useState('en')
     const [category, setCategory] = useState('')
-
+    console.log(searchNews)
     if (searchNews.length !== 0) {
         return (
             <>
