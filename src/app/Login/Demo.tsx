@@ -10,7 +10,7 @@ export default function Demo() {
 
           return (
     <>
-        <Button type="button" onClick={() => { credentialsAction(demoFormData)}} variant="contained" color="primary" sx={{width:'25%', margin:"auto", marginTop:"2em"}}>Demo</Button>
+        <Button type="button" onClick={() => { credentialsAction(demoFormData)}} variant="contained" color="info" sx={{width:'25%', margin:"auto", marginTop:"2em", backgroundColor:"white", color:"red"}}>Demo</Button>
     </>
           )
 }

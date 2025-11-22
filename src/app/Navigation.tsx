@@ -21,20 +21,7 @@ const pages = ['Search News', 'Retrieve News', 'Top News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navigation({user}:{user:string}) {
-    console.log(user)
-    // return (
-    //     <nav className="flex flex-row">
-    //         <ul className="">
-    //             <li><a href="/SearchNews">Search News</a></li>
-    //             <li><a href="/RetrieveNews">Retreive News</a></li>
-    //             <li>Top News</li>
-    //         </ul>
-    //         <div className="">
-    //             <h1>{user}</h1>
-    //             <LogoutServer/>
-    //         </div>
-    //     </nav>
-    // )
+   
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
@@ -53,7 +40,7 @@ export default function Navigation({user}:{user:string}) {
     setAnchorElUser(null);
   };
     return (
-        <AppBar position="static" sx={{m:0}}>
+        <AppBar position="static" sx={{backgroundColor: "red"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <NewspaperIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -104,7 +91,7 @@ export default function Navigation({user}:{user:string}) {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center' }}><a href={`/${page.replace(/\s/g, '')}`}>{page}</a></Typography>
+                  <Typography sx={{ textAlign: 'center', a: {color:"white", textDecoration:"none", hover:"lightblue"}, ":hover": {color: "lightblue"} }}><a href={`/${page.replace(/\s/g, '')}`}>{page}</a></Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -133,7 +120,7 @@ export default function Navigation({user}:{user:string}) {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'white', display: 'block', a: {color:"white", textDecoration:"none"}, ":hover": {color: "lightblue"}}}
               >
                 <a href={`/${page.replace(/\s/g, '')}`}>{page}</a>
               </Button>
