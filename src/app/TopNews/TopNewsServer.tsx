@@ -11,10 +11,10 @@ export default async function TopNewsServer() {
     const topNews = await axiosInstanceWithAPIKey.get(url).then((res) => res.data[`top_news`] ).catch((err) => console.log(err))
 
     if (topNews !== undefined) {
-        console.log(topNews)
+        const flatTopNews = topNews.map((each_news_obj: {news: NewsArticle}) => Object.values(each_news_obj)).flat(2)
         return (
             <ul>
-                {/* {topNews[0]['news'].map((eachTopNews: NewsArticle) => <TopNewsClient key={eachTopNews.id} eachTopNews={eachTopNews} />)} */}
+                {flatTopNews.map((eachTopNews: NewsArticle) => <TopNewsClient key={eachTopNews.id} eachTopNews={eachTopNews} />)}
             </ul>)
     }
 }
