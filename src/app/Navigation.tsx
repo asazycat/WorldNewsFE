@@ -91,7 +91,7 @@ export default function Navigation({user}:{user:string}) {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: 'center', a: {color:"white", textDecoration:"none", hover:"lightblue"}, ":hover": {color: "lightblue"} }}><a href={`/${page.replace(/\s/g, '')}`}>{page}</a></Typography>
+                  <Typography sx={{ textAlign: 'center', a: {color:"red", textDecoration:"none", hover:"lightblue"}, ":hover": {color: "lightblue"} }}><a href={`/${page.replace(/\s/g, '')}`}>{page}</a></Typography>
                 </MenuItem>
               ))}
             </Menu>

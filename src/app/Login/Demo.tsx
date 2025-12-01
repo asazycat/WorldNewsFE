@@ -5,8 +5,8 @@ import { credentialsAction } from "../actions"
 
 export default function Demo() {
         const demoFormData = new FormData(); 
-          demoFormData.append("email", 'ali@gmail.com'); 
-          demoFormData.append("password", 'ali'); 
+          demoFormData.append("email", 'demo@gmail.co.uk'); 
+          demoFormData.append("password", 'demo'); 
 
           return (
     <>

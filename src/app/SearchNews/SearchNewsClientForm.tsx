@@ -31,14 +31,14 @@ export default function SearchNewsClientForm(
             setLanguage:React.Dispatch<SetStateAction<string>>,
             setsearchNews: React.Dispatch<SetStateAction<NewsArticle[]>>
     }) {
-    return (<>
+    return (<Box sx={{display:"flex", width:"100%", my:"2em", textAlign:"center", border: "2px solid red", justifyContent:"center"}}>
                 <Box>
                       <TextField id="standard-basic" label="Search" variant="standard" onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}/>
                 </Box>
                  <Box>
                        <p>Search By</p>
-                       <label> <Checkbox/> Title</label>
-                       <label> <Checkbox /> Content</label>
+                       <label> <Checkbox defaultChecked /> Title</label>
+                       <label> <Checkbox defaultChecked /> Content</label>
                 </Box>
                 <Box>
                     <p>Country</p>
@@ -55,13 +55,13 @@ export default function SearchNewsClientForm(
                 <Box>
                     <p>Category</p>
                     <Select label="categories" value={category}>
-                        <MenuItem value={''}>{category}</MenuItem>
+                        <MenuItem value={category}>{category}</MenuItem>
                         {categories.map((eachCategory,i) => <MenuItem value={eachCategory} key={i} onClick={() => setCategory(eachCategory)}>{eachCategory}</MenuItem>)}
                     </Select>
                 </Box>
                <Button variant="contained"  onClick={async () => {
                     await SearchNewsAction(text,textMatchIndexes,country,language,category).then((res) => {setsearchNews(res ?? [])})
                 }} sx={{backgroundColor:"white", color:"red"}} >Search News</Button>
-            </>
+            </Box>
     )
 }

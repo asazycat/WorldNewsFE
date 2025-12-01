@@ -1,7 +1,7 @@
 
 'use server'
 
-import  prisma from "../../prisma"
+import  {prisma} from "../../prisma"
 import { signIn, signOut } from "../app/api/auth/[...nextauth]/auth";
 import { axiosInstanceWithAPIKey } from "./axiosInstances";
 import { redirect } from "next/navigation"
@@ -38,7 +38,7 @@ export async function SearchNewsAction(
         // 'latest-publish-date':`${latestPublishDate}`,
         // 'news-sources': `${newsSources}`,
         // 'authors': `${authors}`,
-        'categories': `${categories}`,
+        'categories': `${categories === 'All' ? '' : categories}`,
         // 'entities': `${entities}`,
         // 'location-filter': `${locationFilter}`,
         // 'sort': '',
