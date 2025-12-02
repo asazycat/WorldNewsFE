@@ -13,7 +13,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       {session ? (<body>
-        <Navigation user={session?.user?.name ?? ''}/>
+        <Navigation name={session?.user?.name ?? ''} image={session?.user?.image ?? ''}/>
        {children}
       </body>) : (<body>
         <LoginServer/>

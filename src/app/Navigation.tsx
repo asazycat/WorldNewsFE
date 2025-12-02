@@ -20,7 +20,7 @@ import { endCredentialsAction } from "./actions";
 const pages = ['Search News', 'Retrieve News', 'Top News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export default function Navigation({user}:{user:string}) {
+export default function Navigation({name,image}:{name:string,image:String}) {
    
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
@@ -129,7 +129,7 @@ export default function Navigation({user}:{user:string}) {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt={`${name}`} src={`${image}`} />
               </IconButton>
             </Tooltip>
             <Menu

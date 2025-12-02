@@ -14,3 +14,10 @@ export interface NewsArticle {
   sentiment: number;
 }
 
+
+
+export interface User {
+  name: string | undefined,
+  email: string | undefined,
+  image: string | undefined,
+} 
