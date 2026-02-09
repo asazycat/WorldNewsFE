@@ -5,6 +5,7 @@ import { NewsArticle } from "../../../interfaces"
 import SearchNewsClientForm from "./SearchNewsClientForm"
 import EachSearchNewsClient from "./EachSearchNewsClient"
 import { Box } from "@mui/material"
+import BoxComponent from "./BoxComponent"
 export default function SearchNewsClient({children}: {children: React.ReactNode}) {
    
     const [searchNews, setsearchNews] = useState<NewsArticle[]>([])
@@ -22,7 +23,7 @@ export default function SearchNewsClient({children}: {children: React.ReactNode}
                 
                 <SearchNewsClientForm text={text} textMatchIndexes={textMatchIndexes} country={country} language={language} category={category} setText={setText} setTextMatchIndexes={setTextMatchIndexes} setCountry={setCountry} setCategory={setCategory} setLanguage={setLanguage} setsearchNews={setsearchNews}/>
                 
-                <Box sx={{display:{sm: "flex", md:"grid"}, gridTemplateColumns: "auto auto auto", width: "80%", margin:"auto", border: "2px solid black", gap:"2em", padding: "2em"}}>{searchNews.map((eachNews: NewsArticle) => <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</Box>
+               <BoxComponent>{searchNews.map((eachNews: NewsArticle) => <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</BoxComponent>
             </>
         )
     } else {

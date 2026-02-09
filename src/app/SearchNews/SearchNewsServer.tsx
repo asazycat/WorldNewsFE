@@ -3,6 +3,7 @@ import { axiosInstanceWithAPIKey } from "../axiosInstances"
 import { NewsArticle } from "../../../interfaces"
 import EachSearchNewsClient from "./EachSearchNewsClient"
 import { Box } from "@mui/material"
+import BoxComponent from "./BoxComponent"
 export default async function SearchNewsServer() {
     const date = new Date()
     const params = new URLSearchParams({
@@ -22,7 +23,7 @@ export default async function SearchNewsServer() {
         'sort': '',
         'sort-direction': '',
         'offset': '',
-        'number':''
+        'number': `${Number('35')}`
         })
     const url = `/search-news?${params}`
    
@@ -35,8 +36,10 @@ export default async function SearchNewsServer() {
         .then((res) => res.data.news)
         .catch((err) => console.log(err)) ?? []
     
-    
+  
     return (
-        <Box sx={{display:{sm: "flex", md:"grid"}, gridTemplateColumns: "auto auto auto", width: "80%", margin:"auto", border: "2px solid black", gap:"2em", padding: "2em"}}>{searchNewsRes.map((eachNews: NewsArticle) =>  <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}</Box>
+        <BoxComponent>
+             {searchNewsRes.map((eachNews: NewsArticle) =>  <EachSearchNewsClient key={eachNews.id} eachNews={eachNews}/>)}
+        </BoxComponent>
     )
 }

@@ -23,7 +23,7 @@ export async function SearchNewsAction(
     // sort: string,
     // sortDirection: 'ASC'|'DESC',
     // offset: number,
-    // number: number 
+    number: number = 35
     ) {
 
     // const date = new Date()
@@ -44,7 +44,7 @@ export async function SearchNewsAction(
         // 'sort': '',
         // 'sort-direction': `${sortDirection}`,
         // 'offset': `${offset}`,
-        // 'number':`${number}`
+        'number': `${number}`
         })
     const url = `/search-news?${params}`
    

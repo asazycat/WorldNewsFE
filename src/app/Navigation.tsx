@@ -17,7 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import { endCredentialsAction } from "./actions";
 
-const pages = ['Search News', 'Retrieve News', 'Top News'];
+const pages = ['Search News', 'Retrieve News', 'Top News', 'Extract News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 export default function Navigation({name,image}:{name:string,image:String}) {
