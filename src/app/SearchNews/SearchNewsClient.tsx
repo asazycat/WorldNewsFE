@@ -4,7 +4,6 @@ import { useState } from "react"
 import { NewsArticle } from "../../../interfaces"
 import SearchNewsClientForm from "./SearchNewsClientForm"
 import EachSearchNewsClient from "./EachSearchNewsClient"
-import { Box } from "@mui/material"
 import BoxComponent from "./BoxComponent"
 export default function SearchNewsClient({children}: {children: React.ReactNode}) {
    

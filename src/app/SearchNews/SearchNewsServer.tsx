@@ -2,7 +2,6 @@
 import { axiosInstanceWithAPIKey } from "../axiosInstances"
 import { NewsArticle } from "../../../interfaces"
 import EachSearchNewsClient from "./EachSearchNewsClient"
-import { Box } from "@mui/material"
 import BoxComponent from "./BoxComponent"
 export default async function SearchNewsServer() {
     const date = new Date()

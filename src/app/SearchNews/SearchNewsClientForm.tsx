@@ -31,6 +31,7 @@ export default function SearchNewsClientForm(
             setLanguage:React.Dispatch<SetStateAction<string>>,
             setsearchNews: React.Dispatch<SetStateAction<NewsArticle[]>>
     }) {
+        console.log(setTextMatchIndexes)
     return (<Box sx={{display:"flex", width:"100%", my:"2em", textAlign:"center", border: "2px solid red", justifyContent:"center"}}>
                 <Box>
                       <TextField id="standard-basic" label="Search" variant="standard" onChange={(e:ChangeEvent<HTMLInputElement>) => setText(e.target.value)}/>
