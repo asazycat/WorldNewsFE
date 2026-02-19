@@ -33,7 +33,7 @@ export default async function SearchNewsServer() {
     const searchNewsRes = await axiosInstanceWithAPIKey
         .get(url)
         .then((res) => res.data.news)
-        .catch((err) => console.log(err)) 
+        .catch((err) => console.log(err)) ?? []
     
   
     return (
