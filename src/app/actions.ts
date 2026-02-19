@@ -62,16 +62,14 @@ export async function SearchNewsAction(
 
 
 export async function credentialsAction(formData: FormData) {
-    'use server'
-     console.log(formData)
+   
     try {
-        await signIn("credentials", formData)
+       const res = await signIn("credentials", formData)
+       console.log(res)
     }
     catch (err) {
-        throw err
-    } finally {
-        redirect('/')
-    }
+        console.log('--------',err, '--------')
+    } 
 }
 
 export async function endCredentialsAction() {
