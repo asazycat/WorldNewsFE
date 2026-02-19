@@ -1,6 +1,6 @@
 'use client'
 
-import LogoutServer from "./Login/LogoutServer";
+// import LogoutServer from "./Login/LogoutServer";
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -20,7 +20,7 @@ import { endCredentialsAction } from "./actions";
 const pages = ['Search News', 'Retrieve News', 'Top News', 'Extract News'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-export default function Navigation({name,image}:{name:string,image:String}) {
+export default function Navigation({name,image}:{name:string,image:string}) {
    
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);

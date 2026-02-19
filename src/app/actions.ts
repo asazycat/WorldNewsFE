@@ -4,7 +4,7 @@
 import  {prisma} from "../../prisma"
 import { signIn, signOut } from "../app/api/auth/[...nextauth]/auth";
 import { axiosInstanceWithAPIKey } from "./axiosInstances";
-import { redirect } from "next/navigation"
+// import { redirect } from "next/navigation"
 
 export async function SearchNewsAction(
     text: string,
